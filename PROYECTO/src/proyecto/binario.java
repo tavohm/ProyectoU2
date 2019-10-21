@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package proyecto;
 
+import java.awt.ComponentOrientation;
 import javax.swing.ImageIcon;
 
 /**
  *
- * @author Sammy Guergachi <sguergachi at gmail.com>
+ * @author ISC Gustavo Jesús Hernández Molina
  */
 public class binario extends javax.swing.JFrame {
 
@@ -20,12 +16,10 @@ public class binario extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.jpg")).getImage());
-        this.setDefaultCloseOperation(inicial.DO_NOTHING_ON_CLOSE);        
+        this.setDefaultCloseOperation(inicial.DO_NOTHING_ON_CLOSE);  
+        jTextArea1.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
     }
 
-    binario(inicial inicial, boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -37,6 +31,8 @@ public class binario extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema Binario");
@@ -50,19 +46,34 @@ public class binario extends javax.swing.JFrame {
             }
         });
 
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("En la antigua China, en el texto clásico del I Ching, se describe una serie completa de 8 trigramas y 64 hexagramas (análogos a 3 bits) y números binarios de 6 bits. También han sido utilizadas series similares de combinaciones binarias en sistemas de adivinación tradicionales africanos, como el Ifá, así como en la geomancia medieval occidental.\n\nEl erudito y filósofo Chino Shao Yong en el siglo XI desarrolló un arreglo binario ordenado de los hexagramas del I Ching, representando la secuencia decimal de 0 a 63, y un método para generar el mismo.\n\nEn 1605 Francis Bacon habló de un sistema por el cual las letras del alfabeto podrían reducirse a secuencias de dígitos binarios, las cuales podrían ser codificadas como variaciones apenas visibles en la fuente de cualquier texto arbitrario.");
+        jTextArea1.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jTextArea1);
+        jTextArea1.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(337, Short.MAX_VALUE)
-                .addComponent(jButton1)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 327, Short.MAX_VALUE)
+                        .addComponent(jButton1))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
@@ -105,11 +116,14 @@ public class binario extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new binario().setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
