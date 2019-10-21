@@ -7,17 +7,17 @@ import javax.swing.ImageIcon;
  *
  * @author ISC Gustavo Jesús Hernández Molina
  */
-public class binario extends javax.swing.JFrame {
+public class FrmBinario extends javax.swing.JFrame {
 
     /**
      * Creates new form binario
      */
-    public binario() {
+    public FrmBinario() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.jpg")).getImage());
-        this.setDefaultCloseOperation(inicial.DO_NOTHING_ON_CLOSE);  
-        jTextArea1.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+        this.setDefaultCloseOperation(FrmInicial.DO_NOTHING_ON_CLOSE);  
+        txaContenido.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
     }
 
 
@@ -30,30 +30,30 @@ public class binario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txaContenido = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema Binario");
         setName("frmBinario"); // NOI18N
         setResizable(false);
 
-        jButton1.setText("Salir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnSalirActionPerformed(evt);
             }
         });
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("En la antigua China, en el texto clásico del I Ching, se describe una serie completa de 8 trigramas y 64 hexagramas (análogos a 3 bits) y números binarios de 6 bits. También han sido utilizadas series similares de combinaciones binarias en sistemas de adivinación tradicionales africanos, como el Ifá, así como en la geomancia medieval occidental.\n\nEl erudito y filósofo Chino Shao Yong en el siglo XI desarrolló un arreglo binario ordenado de los hexagramas del I Ching, representando la secuencia decimal de 0 a 63, y un método para generar el mismo.\n\nEn 1605 Francis Bacon habló de un sistema por el cual las letras del alfabeto podrían reducirse a secuencias de dígitos binarios, las cuales podrían ser codificadas como variaciones apenas visibles en la fuente de cualquier texto arbitrario.");
-        jTextArea1.setWrapStyleWord(true);
-        jScrollPane1.setViewportView(jTextArea1);
-        jTextArea1.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+        txaContenido.setEditable(false);
+        txaContenido.setColumns(20);
+        txaContenido.setLineWrap(true);
+        txaContenido.setRows(5);
+        txaContenido.setText("En la antigua China, en el texto clásico del I Ching, se describe una serie completa de 8 trigramas y 64 hexagramas (análogos a 3 bits) y números binarios de 6 bits. También han sido utilizadas series similares de combinaciones binarias en sistemas de adivinación tradicionales africanos, como el Ifá, así como en la geomancia medieval occidental.\n\nEl erudito y filósofo Chino Shao Yong en el siglo XI desarrolló un arreglo binario ordenado de los hexagramas del I Ching, representando la secuencia decimal de 0 a 63, y un método para generar el mismo.\n\nEn 1605 Francis Bacon habló de un sistema por el cual las letras del alfabeto podrían reducirse a secuencias de dígitos binarios, las cuales podrían ser codificadas como variaciones apenas visibles en la fuente de cualquier texto arbitrario.");
+        txaContenido.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(txaContenido);
+        txaContenido.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -64,7 +64,7 @@ public class binario extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 327, Short.MAX_VALUE)
-                        .addComponent(jButton1))
+                        .addComponent(btnSalir))
                     .addComponent(jScrollPane1))
                 .addContainerGap())
         );
@@ -74,16 +74,16 @@ public class binario extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnSalir)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,28 +102,29 @@ public class binario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(binario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmBinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(binario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmBinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(binario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmBinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(binario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmBinario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new binario().setVisible(true);
+                new FrmBinario().setVisible(true);
                 
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea txaContenido;
     // End of variables declaration//GEN-END:variables
 }

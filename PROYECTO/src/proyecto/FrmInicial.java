@@ -3,19 +3,19 @@ package proyecto;
 import javax.swing.ImageIcon;
 
 
-public class inicial extends javax.swing.JFrame {
+public class FrmInicial extends javax.swing.JFrame {
 
     /**
      * Creates new form inicial
      */
     
-    public inicial() {
+    public FrmInicial() {
         initComponents();
         this.setLocationRelativeTo(null); // Centrar pantalla 
         Imagen im = new Imagen(jPanel1);
         jPanel1.add(im).repaint();
         this.setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.jpg")).getImage());
-        this.setDefaultCloseOperation(inicial.DO_NOTHING_ON_CLOSE);
+        this.setDefaultCloseOperation(FrmInicial.DO_NOTHING_ON_CLOSE);
         
     }
 
@@ -33,14 +33,14 @@ public class inicial extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        jmTemas = new javax.swing.JMenu();
+        jmiBinario = new javax.swing.JMenuItem();
+        jmiOctal = new javax.swing.JMenuItem();
+        jmiHexadecimal = new javax.swing.JMenuItem();
+        jmiSalir = new javax.swing.JMenuItem();
+        jmAyuda = new javax.swing.JMenu();
+        jmiSobreNosotros = new javax.swing.JMenuItem();
+        jmiManual = new javax.swing.JMenuItem();
 
         jMenuItem6.setText("jMenuItem6");
 
@@ -60,73 +60,73 @@ public class inicial extends javax.swing.JFrame {
             .addGap(0, 287, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Temas");
+        jmTemas.setText("Temas");
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem1.setText("Binario");
-        jMenuItem1.setName("frmInicial"); // NOI18N
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jmiBinario.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jmiBinario.setText("Binario");
+        jmiBinario.setName("frmInicial"); // NOI18N
+        jmiBinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jmiBinarioActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jmTemas.add(jmiBinario);
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem2.setText("Octal");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jmiOctal.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jmiOctal.setText("Octal");
+        jmiOctal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jmiOctalActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        jmTemas.add(jmiOctal);
 
-        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem3.setText("Hexadecimal");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jmiHexadecimal.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jmiHexadecimal.setText("Hexadecimal");
+        jmiHexadecimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jmiHexadecimalActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem3);
+        jmTemas.add(jmiHexadecimal);
 
-        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem7.setText("Salir");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        jmiSalir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jmiSalir.setText("Salir");
+        jmiSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                jmiSalirActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem7);
+        jmTemas.add(jmiSalir);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(jmTemas);
 
-        jMenu2.setText("Ayuda");
-        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+        jmAyuda.setText("Ayuda");
+        jmAyuda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu2ActionPerformed(evt);
+                jmAyudaActionPerformed(evt);
             }
         });
 
-        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
-        jMenuItem4.setText("Sobre Nosotros");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        jmiSobreNosotros.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
+        jmiSobreNosotros.setText("Sobre Nosotros");
+        jmiSobreNosotros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                jmiSobreNosotrosActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem4);
+        jmAyuda.add(jmiSobreNosotros);
 
-        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
-        jMenuItem5.setText("Manual de Uso");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        jmiManual.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
+        jmiManual.setText("Manual de Uso");
+        jmiManual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                jmiManualActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem5);
+        jmAyuda.add(jmiManual);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(jmAyuda);
 
         setJMenuBar(jMenuBar1);
 
@@ -150,38 +150,38 @@ public class inicial extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        binario frmBinario = new binario();
+    private void jmiBinarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiBinarioActionPerformed
+        FrmBinario frmBinario = new FrmBinario();
         frmBinario.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jmiBinarioActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        octal frmOctal = new octal();
+    private void jmiOctalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiOctalActionPerformed
+        FrmOctal frmOctal = new FrmOctal();
         frmOctal.setVisible(true);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_jmiOctalActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        hexadecimal frmHexa = new hexadecimal();
+    private void jmiHexadecimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiHexadecimalActionPerformed
+        FrmHexadecimal frmHexa = new FrmHexadecimal();
         frmHexa.setVisible(true);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jmiHexadecimalActionPerformed
 
-    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+    private void jmAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAyudaActionPerformed
   
-    }//GEN-LAST:event_jMenu2ActionPerformed
+    }//GEN-LAST:event_jmAyudaActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        acercade frmAcercaDe = new acercade();
+    private void jmiSobreNosotrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSobreNosotrosActionPerformed
+        FrmAcercaDe frmAcercaDe = new FrmAcercaDe();
         frmAcercaDe.setVisible(true);
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_jmiSobreNosotrosActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void jmiSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSalirActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_jmiSalirActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void jmiManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiManualActionPerformed
         Procesos manual = new Procesos();
         manual.cargarArchivo();
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_jmiManualActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,29 +200,30 @@ public class inicial extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(inicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
         
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new inicial().setVisible(true);
+            new FrmInicial().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenu jmAyuda;
+    private javax.swing.JMenu jmTemas;
+    private javax.swing.JMenuItem jmiBinario;
+    private javax.swing.JMenuItem jmiHexadecimal;
+    private javax.swing.JMenuItem jmiManual;
+    private javax.swing.JMenuItem jmiOctal;
+    private javax.swing.JMenuItem jmiSalir;
+    private javax.swing.JMenuItem jmiSobreNosotros;
     // End of variables declaration//GEN-END:variables
 }
