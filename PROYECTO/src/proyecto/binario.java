@@ -17,7 +17,7 @@ public class binario extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.jpg")).getImage());
         this.setDefaultCloseOperation(inicial.DO_NOTHING_ON_CLOSE);  
-        jTextArea1.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+        jTextArea1.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
     }
 
 
